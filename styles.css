@@ -1,0 +1,113 @@
+:root {
+  --red: #f00;
+  --grey: #ccc;
+  --dark-grey: #bbb;
+  --white: #fff;
+  --black: #000;
+}
+
+html {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 2vmax;
+  line-height: 1.4;
+}
+
+button:focus {
+  outline: 0;
+}
+
+main {
+  height: 320px;
+  max-width: max-content;
+  margin: 3em auto 0 auto;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.toggle {
+  font-family: Arial;
+  padding: 15px;
+  border: 0px;
+  margin: 20px;
+  color: var(--white);
+  border-radius: 50%;
+  background: var(--grey);
+  font-size: 0.75em;
+  font-weight: 800;
+}
+
+.toggle:hover {
+  cursor: pointer;
+  background: var(--dark-grey);
+}
+
+.calendar-days {
+  border: 1.25px solid var(--grey);
+  border-radius: 6px;
+  padding: 0.5em
+}
+
+.month {
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.day-of-week {
+  padding-top: 10px;
+}
+
+.day-of-week,
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-of-week > div {
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1.25px solid var(--grey);
+}
+
+.date-grid {
+  margin-top: 0.5em;
+}
+
+.date-grid button {
+  font-size: 1em;
+  position: relative;
+  border: 0;
+  width: 3.5ch;
+  height: 3.5ch;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.day-0,
+.day-6 {
+  color: var(--red);
+}
+/* class offsets so first of months are in the correct column */
+.first-of-month-day-0 {
+  grid-column: 1;
+}
+.first-of-month-day-1 {
+  grid-column: 2;
+}
+.first-of-month-day-2 {
+  grid-column: 3;
+}
+.first-of-month-day-3 {
+  grid-column: 4;
+}
+.first-of-month-day-4 {
+  grid-column: 5;
+}
+.first-of-month-day-5 {
+  grid-column: 6;
+}
+.first-of-month-day-6 {
+  grid-column: 7;
+}
